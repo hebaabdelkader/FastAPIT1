@@ -15,6 +15,10 @@ def h():
     return{
         "msg":"hello"
     }
+@Router.get("/bye")
+def bye():
+    return{"msg":"bye"}
+
 @Router.get("/hello",response_model=helloresponse)
 def hello(request:helloRequest):
     return{
